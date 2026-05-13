@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> قصتنا ي بابي  ♥️</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body { margin: 0; background: #0f172a; color: #f8fafc; font-family: 'Arial', sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { 
+            background: rgba(30, 41, 59, 0.8); 
+            border-radius: 20px; 
+            padding: 15px; 
+            margin-bottom: 30px; 
+            border: 1px solid #fb7185;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+        .story-img { 
+            width: 100%; 
+            border-radius: 15px; 
+            margin-bottom: 15px; 
+            border: 2px solid #f472b6;
+        }
+        h2 { color: #fb7185; font-size: 1.4rem; }
+        p { line-height: 1.7; font-size: 1.1rem; }
+        .magic-button {
+            display: block; width: 100%; padding: 18px;
+            background: linear-gradient(45deg, #fb7185, #f472b6);
+            color: white; text-align: center; text-decoration: none;
+            border-radius: 50px; font-weight: bold; font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(251, 113, 133, 0.4);
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <!-- الأغنية الرومانسية -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.albumaty.com/song/4126.html" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1 style="text-align: center; color: #fb7185;">إلى بطلة حياتي ❤️</h1>
+        <p style="text-align: center; font-size: 0.9rem;">(اضغط في أي مكان لتشغيل الموسيقى 🎵)</p>
+
+        <!-- المشهد الأول -->
+        <div class="card">
+            <div class="story-img" style="height: 200px; background: #334155; display: flex; align-items: center; justify-content: center;">🖼️ صورة كرتونية: البداية الساحرة</div>
+            <h2>سحر البدايات</h2>
+            <p>كان أول يوم شفتك فيه، سرحت في تفاصيلك.. في تصرفاتك وأنتِ زي الطفلة؛ لما بتضحكي، ولما بتتعصبي، ولما بتكوني زعلانة.</p>
+        </div>
+
+        <!-- المشهد الثاني -->
+        <div class="card">
+            <div class="story-img" style="height: 200px; background: #334155; display: flex; align-items: center; justify-content: center;">🖼️ صورة كرتونية: المشاكس الصغير</div>
+            <h2>خطة المشاكس</h2>
+            <p>كنت خايف ترفضيني.. فقررت أقرب منك أكتر بطريقتي.. كنت بوقعك في مشاكل وأحلها ليكِ في نفس الوقت! كنت بضحك كل لما تبصيلي بنظرتك.</p>
+        </div>
+
+        <!-- المشهد الثالث -->
+        <div class="card">
+            <div class="story-img" style="height: 200px; background: #334155; display: flex; align-items: center; justify-content: center;">🖼️ صورة كرتونية: فتاة الخيال</div>
+            <h2>لما الخيال بقي حقيقه</h2>
+            <p>لقيتك! أنتِ هي دي.. قصيرة، طفلة في نفسك، ابتسامتك وضحكتك وشكلك.. مش عايز أبعد عنك أبدًا.</p>
+        </div>
+
+        <!-- المشهد الرابع -->
+        <div class="card">
+            <div class="story-img" style="height: 200px; background: #334155; display: flex; align-items: center; justify-content: center;">🖼️ صورة كرتونية: لحظة الحب</div>
+            <h2>لحظة </h2>
+            <p>لما قولتلك: "تعالي نتخيل إن جيت اتقدمتلك مثلاً، هتوافقي؟".. وقولتلي: "أنا كمان بحبك". كانت أسعد لحظة في حياتي.</p>
+        </div>
+
+        <!-- زر التواصل (ضع رقمك هنا) -->
+        <a href="https://wa.me/201XXXXXXXXX?text=أنا%20كمان%20بحبك%20وهفضل%20دايماً%20بطلة%20قصتك" class="magic-button" onclick="celebrate()">
+            هل ستظلين دائماً بطلة قصتي؟ 💍
+        </a>
+    </div>
+
+    <script>
+        // تشغيل الموسيقى عند أول لمسة للشاشة (سياسة المتصفحات)
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+        }, { once: true });
+
+        // تأثير القلوب عند الضغط
+        function celebrate() {
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#fb7185', '#f472b6', '#ffffff'] });
+        }
+        
+        // قلوب تلقائية عند الفتح
+        window.onload = function() {
+            setTimeout(celebrate, 1000);
+        };
+    </script>
+</body>
+</html>
